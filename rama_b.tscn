@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cg3w8vioufl6a"]
+
+[ext_resource type="Texture2D" uid="uid://d0wkhdav02sfv" path="res://assets/Materiales.png" id="1_1fqso"]
+[ext_resource type="Script" uid="uid://baxldnpwgdk6g" path="res://sprite_2d.gd" id="2_pdnyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuk7q"]
+atlas = ExtResource("1_1fqso")
+region = Rect2(945.338, 58.626755, 80.52551, 984.2232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd11d"]
+size = Vector2(12.148148, 19.199528)
+
+[node name="Rama_B" type="Sprite2D" unique_id=339857481]
+z_index = 3
+texture = SubResource("AtlasTexture_yuk7q")
+script = ExtResource("2_pdnyd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1467798563]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=395631805]
+position = Vector2(-1, 2.4999895)
+scale = Vector2(6.75, 51.095)
+shape = SubResource("RectangleShape2D_dd11d")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="on_area_2d_mouse_exited"]

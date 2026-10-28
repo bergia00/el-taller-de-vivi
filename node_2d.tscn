@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dm6kf5rbk3y3w"]
+
+[ext_resource type="Texture2D" uid="uid://bh14ip0t10glg" path="res://assets/Fondo.png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://rc2o003ey8vt" path="res://assets/Mesa.png" id="4_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://qwmhab85fnxe" path="res://Pegamento.tscn" id="5_d21ai"]
+[ext_resource type="Texture2D" uid="uid://dlulljdko6f8o" path="res://assets/Vivi.png" id="5_kdubu"]
+[ext_resource type="PackedScene" uid="uid://5fqnsyhwln3h" path="res://rama_a.tscn" id="6_d21ai"]
+[ext_resource type="PackedScene" uid="uid://cg3w8vioufl6a" path="res://rama_b.tscn" id="7_rj586"]
+[ext_resource type="PackedScene" uid="uid://b8o101ovm1rgp" path="res://rama_c.tscn" id="8_4d7sh"]
+[ext_resource type="Script" uid="uid://byple3mbumbfp" path="res://button.gd" id="9_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://r5ribce5jkr" path="res://flor_grande.tscn" id="9_ir8iy"]
+
+[node name="Node2D" type="Node2D" unique_id=217590319]
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=532527619]
+position = Vector2(960, 540)
+texture = ExtResource("3_epypp")
+metadata/_edit_lock_ = true
+
+[node name="Mesa" type="Sprite2D" parent="." unique_id=1386513732]
+z_index = 2
+position = Vector2(960, 631)
+texture = ExtResource("4_q6r6c")
+metadata/_edit_lock_ = true
+
+[node name="Vivi" type="Sprite2D" parent="." unique_id=2077761585]
+z_index = 1
+position = Vector2(1623, 353.00003)
+scale = Vector2(0.6287037, 0.6287037)
+texture = ExtResource("5_kdubu")
+metadata/_edit_lock_ = true
+
+[node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
+position = Vector2(101.75, 776.5227)
+scale = Vector2(0.57272726, 0.5727273)
+
+[node name="Rama_A" parent="." unique_id=122061708 instance=ExtResource("6_d21ai")]
+position = Vector2(975, 824)
+scale = Vector2(0.5322581, 0.5322581)
+
+[node name="Rama_B" parent="." unique_id=339857481 instance=ExtResource("7_rj586")]
+position = Vector2(818.25, 850.87463)
+scale = Vector2(0.5937492, 0.5937492)
+
+[node name="Rama_C" parent="." unique_id=373623345 instance=ExtResource("8_4d7sh")]
+position = Vector2(1094.1251, 837.2106)
+scale = Vector2(0.5994614, 0.5994614)
+
+[node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
+position = Vector2(346.00003, 827)
+scale = Vector2(0.47482014, 0.47482017)
+
+[node name="Button" type="Button" parent="." unique_id=1753749550]
+offset_left = 497.0
+offset_top = 413.0
+offset_right = 597.0
+offset_bottom = 501.0
+action_mode = 0
+script = ExtResource("9_4d7sh")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
