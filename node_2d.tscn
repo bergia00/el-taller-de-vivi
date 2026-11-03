@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bh14ip0t10glg" path="res://assets/Fondo.png" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://rc2o003ey8vt" path="res://assets/Mesa.png" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://qwmhab85fnxe" path="res://Pegamento.tscn" id="5_d21ai"]
+[ext_resource type="Script" uid="uid://ddh7p0kg2sp5k" path="res://pegamento.gd" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://dlulljdko6f8o" path="res://assets/Vivi.png" id="5_kdubu"]
 [ext_resource type="PackedScene" uid="uid://5fqnsyhwln3h" path="res://rama_a.tscn" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://cg3w8vioufl6a" path="res://rama_b.tscn" id="7_rj586"]
@@ -33,6 +34,7 @@ metadata/_edit_lock_ = true
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
 position = Vector2(101.75, 776.5227)
 scale = Vector2(0.57272726, 0.5727273)
+script = ExtResource("5_ir8iy")
 
 [node name="Rama_A" parent="." unique_id=122061708 instance=ExtResource("6_d21ai")]
 position = Vector2(975, 824)
@@ -58,4 +60,5 @@ offset_bottom = 501.0
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
+[connection signal="pressed" from="Button" to="Pegamento" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
