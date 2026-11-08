@@ -40,7 +40,7 @@ scale = Vector2(0.71818185, 0.71818197)
 script = ExtResource("5_ir8iy")
 
 [node name="Rama_A" parent="." unique_id=122061708 instance=ExtResource("6_d21ai")]
-position = Vector2(1536, 903)
+position = Vector2(1516, 872)
 scale = Vector2(0.5322581, 0.5322581)
 script = ExtResource("7_0h7mo")
 
@@ -49,23 +49,26 @@ position = Vector2(1668, 873)
 rotation = 0.05235988
 scale = Vector2(0.5937492, 0.5937492)
 script = null
+metadata/_edit_lock_ = true
 
 [node name="Rama_C" parent="." unique_id=373623345 instance=ExtResource("8_4d7sh")]
 position = Vector2(1615.9999, 888.99994)
 rotation = 0.05235988
 scale = Vector2(0.5994614, 0.5994614)
 script = null
+metadata/_edit_lock_ = true
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
-position = Vector2(942, 698)
+position = Vector2(387, 868)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("11_nr8wp")
 
 [node name="Button" type="Button" parent="." unique_id=1753749550]
-offset_left = 497.0
-offset_top = 413.0
-offset_right = 597.0
-offset_bottom = 501.0
+z_index = 2
+offset_left = 54.0
+offset_top = 645.0
+offset_right = 169.0
+offset_bottom = 974.0
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
