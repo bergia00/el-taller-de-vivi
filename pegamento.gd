@@ -1,5 +1,5 @@
 extends Sprite2D
-var ValoresEtapas = [[200, 100, 0, 0], [100, 200, 90, 1]]
+var ValoresEtapas = [[113, 811, 0, 0], [113, 811, 0, 1],]
 var Etapa = 0
 
 func _ready():

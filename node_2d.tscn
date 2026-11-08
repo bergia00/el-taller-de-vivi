@@ -6,10 +6,13 @@
 [ext_resource type="Script" uid="uid://ddh7p0kg2sp5k" path="res://pegamento.gd" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://dlulljdko6f8o" path="res://assets/Vivi.png" id="5_kdubu"]
 [ext_resource type="PackedScene" uid="uid://5fqnsyhwln3h" path="res://rama_a.tscn" id="6_d21ai"]
+[ext_resource type="Script" uid="uid://c1ykvescro3ii" path="res://rama_a.gd" id="7_0h7mo"]
 [ext_resource type="PackedScene" uid="uid://cg3w8vioufl6a" path="res://rama_b.tscn" id="7_rj586"]
 [ext_resource type="PackedScene" uid="uid://b8o101ovm1rgp" path="res://rama_c.tscn" id="8_4d7sh"]
 [ext_resource type="Script" uid="uid://byple3mbumbfp" path="res://button.gd" id="9_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://r5ribce5jkr" path="res://flor_grande.tscn" id="9_ir8iy"]
+[ext_resource type="PackedScene" uid="uid://cpuvgpf3de7sm" path="res://Florcitas.tscn" id="11_hqns4"]
+[ext_resource type="Script" uid="uid://dlik811v32wsk" path="res://flor_grande.gd" id="11_nr8wp"]
 
 [node name="Node2D" type="Node2D" unique_id=217590319]
 
@@ -32,25 +35,31 @@ texture = ExtResource("5_kdubu")
 metadata/_edit_lock_ = true
 
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
-position = Vector2(101.75, 776.5227)
-scale = Vector2(0.57272726, 0.5727273)
+position = Vector2(113.75, 811.0682)
+scale = Vector2(0.71818185, 0.71818197)
 script = ExtResource("5_ir8iy")
 
 [node name="Rama_A" parent="." unique_id=122061708 instance=ExtResource("6_d21ai")]
-position = Vector2(975, 824)
+position = Vector2(1536, 903)
 scale = Vector2(0.5322581, 0.5322581)
+script = ExtResource("7_0h7mo")
 
 [node name="Rama_B" parent="." unique_id=339857481 instance=ExtResource("7_rj586")]
-position = Vector2(818.25, 850.87463)
+position = Vector2(1668, 873)
+rotation = 0.05235988
 scale = Vector2(0.5937492, 0.5937492)
+script = null
 
 [node name="Rama_C" parent="." unique_id=373623345 instance=ExtResource("8_4d7sh")]
-position = Vector2(1094.1251, 837.2106)
+position = Vector2(1615.9999, 888.99994)
+rotation = 0.05235988
 scale = Vector2(0.5994614, 0.5994614)
+script = null
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
-position = Vector2(346.00003, 827)
-scale = Vector2(0.47482014, 0.47482017)
+position = Vector2(942, 698)
+scale = Vector2(0.7733812, 0.77338123)
+script = ExtResource("11_nr8wp")
 
 [node name="Button" type="Button" parent="." unique_id=1753749550]
 offset_left = 497.0
@@ -60,5 +69,13 @@ offset_bottom = 501.0
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
+[node name="FloresChicas" parent="." unique_id=501821727 instance=ExtResource("11_hqns4")]
+position = Vector2(1784, 989)
+rotation = -1.5114552
+script = null
+metadata/_edit_lock_ = true
+
 [connection signal="pressed" from="Button" to="Pegamento" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Rama_A" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="FlorGrande" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
