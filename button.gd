@@ -1,5 +1,5 @@
 extends Button
-var ValoresBoton = [[387, 868, 212, 212, 0, 0, 0], [113, 811, 115, 329, 0, 0, 0]]
+var ValoresBoton = [[281, 762, 212, 212, 0, 0, 0], [55, 646, 115, 329, 0, 0, 0], [836, 698, 212, 212, 0, 0, 0], [942, 698, 212, 212, 0, 3, 0], [1823, 601, 157, 660, 50, 0, 0], [281, 762, 212, 212, 0, 0, 0], [927, 507, 120, 563, 0, 0, 0], [942, 698, 212, 212, 0, 0, 0], [942, 698, 212, 212, 0, 0, 0], [942, 698, 212, 212, 0, 0, 0], [942, 698, 212, 212, 0, 0, 0], [942, 698, 212, 212, 0, 0, 0]]
 var Etapa = 0
 var BotonVisible = false
 var ValoresActuales
@@ -17,8 +17,8 @@ func _on_pressed() -> void:
 	
 func ActualizarBoton():
 	ValoresActuales = ValoresBoton[Etapa]
-	position.x = ValoresActuales.get(0) - (ValoresActuales.get(2)/2)
-	position.y = ValoresActuales.get(1) - (ValoresActuales.get(3)/2)
+	position.x = ValoresActuales.get(0)
+	position.y = ValoresActuales.get(1)
 	size.x = ValoresActuales.get(2)
 	size.y = ValoresActuales.get(3)
 	rotation_degrees = ValoresActuales.get(4)

@@ -35,48 +35,47 @@ texture = ExtResource("5_kdubu")
 metadata/_edit_lock_ = true
 
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
-position = Vector2(113.75, 811.0682)
+z_index = 4
+position = Vector2(790.99994, 558.99994)
+rotation = 2.284636
 scale = Vector2(0.71818185, 0.71818197)
 script = ExtResource("5_ir8iy")
 
 [node name="Rama_A" parent="." unique_id=122061708 instance=ExtResource("6_d21ai")]
-position = Vector2(1516, 872)
+position = Vector2(986, 793)
 scale = Vector2(0.5322581, 0.5322581)
 script = ExtResource("7_0h7mo")
 
 [node name="Rama_B" parent="." unique_id=339857481 instance=ExtResource("7_rj586")]
-position = Vector2(1668, 873)
-rotation = 0.05235988
+position = Vector2(1673, 884.99994)
+rotation = 0.86917394
 scale = Vector2(0.5937492, 0.5937492)
 script = null
-metadata/_edit_lock_ = true
 
 [node name="Rama_C" parent="." unique_id=373623345 instance=ExtResource("8_4d7sh")]
-position = Vector2(1615.9999, 888.99994)
-rotation = 0.05235988
+position = Vector2(1637, 870)
+rotation = 0.86917394
 scale = Vector2(0.5994614, 0.5994614)
 script = null
-metadata/_edit_lock_ = true
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
-position = Vector2(387, 868)
+position = Vector2(974.00006, 546)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("11_nr8wp")
 
 [node name="Button" type="Button" parent="." unique_id=1753749550]
 z_index = 2
-offset_left = 54.0
-offset_top = 645.0
-offset_right = 169.0
-offset_bottom = 974.0
+offset_left = 927.0
+offset_top = 507.0
+offset_right = 1047.0
+offset_bottom = 1070.0
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
 [node name="FloresChicas" parent="." unique_id=501821727 instance=ExtResource("11_hqns4")]
-position = Vector2(1784, 989)
-rotation = -1.5114552
+position = Vector2(1781, 949.99994)
+rotation = 2.7314403
 script = null
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Button" to="Pegamento" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Rama_A" method="_on_button_pressed"]
