@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bloocm6jt2w7m"]
+
+[ext_resource type="Script" uid="uid://qprusaydjdcr" path="res://BtnJugar.gd" id="1_aup5q"]
+
+[node name="Node2D" type="Node2D" unique_id=1571677674]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1972028753]
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
+
+[node name="Jugar" type="Button" parent="." unique_id=297227238]
+z_index = 1
+offset_left = 795.0
+offset_top = 823.0
+offset_right = 1053.0
+offset_bottom = 976.0
+theme_override_font_sizes/font_size = 72
+text = "JUGAR"
+script = ExtResource("1_aup5q")
+
+[connection signal="pressed" from="Jugar" to="Jugar" method="_on_pressed"]
