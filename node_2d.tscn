@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dm6kf5rbk3y3w"]
 
 [ext_resource type="Texture2D" uid="uid://bh14ip0t10glg" path="res://assets/Fondo.png" id="3_epypp"]
+[ext_resource type="Script" uid="uid://bgumpbhqk2gi3" path="res://vivi.gd" id="4_k73cj"]
 [ext_resource type="Texture2D" uid="uid://rc2o003ey8vt" path="res://assets/Mesa.png" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://qwmhab85fnxe" path="res://Pegamento.tscn" id="5_d21ai"]
 [ext_resource type="Script" uid="uid://ddh7p0kg2sp5k" path="res://pegamento.gd" id="5_ir8iy"]
@@ -15,6 +16,8 @@
 [ext_resource type="Script" uid="uid://dlik811v32wsk" path="res://flor_grande.gd" id="11_nr8wp"]
 [ext_resource type="Script" uid="uid://bme7r27pmi0yf" path="res://flor_grande2.gd" id="12_d2bti"]
 [ext_resource type="Script" uid="uid://dxuync2jjh1aw" path="res://flor_grande3.gd" id="13_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://c6wmnefn06xp7" path="res://icon.svg" id="16_ta5nu"]
+[ext_resource type="Script" uid="uid://bmgoqbaqe7udb" path="res://yute.gd" id="17_flf07"]
 
 [node name="Node2D" type="Node2D" unique_id=217590319]
 
@@ -34,11 +37,21 @@ z_index = 1
 position = Vector2(1623, 353.00003)
 scale = Vector2(0.6287037, 0.6287037)
 texture = ExtResource("5_kdubu")
+script = ExtResource("4_k73cj")
 metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Vivi" unique_id=2088892617]
+offset_left = -815.9647
+offset_top = -453.31375
+offset_right = -260.61853
+offset_bottom = -282.39032
+theme_override_font_sizes/font_size = 72
+text = "texto de prueba lorem ipsum o algo"
+autowrap_mode = 3
 
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
 z_index = 10
-position = Vector2(363, 678)
+position = Vector2(257.99997, 784)
 rotation = 2.284636
 scale = Vector2(0.71818185, 0.71818197)
 script = ExtResource("5_ir8iy")
@@ -61,29 +74,29 @@ scale = Vector2(0.5994614, 0.5994614)
 script = null
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
-z_index = 6
-position = Vector2(387, 868)
+z_index = 7
+position = Vector2(980, 546)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("11_nr8wp")
 
 [node name="FlorGrande2" parent="." unique_id=1898763571 instance=ExtResource("9_ir8iy")]
-z_index = 5
-position = Vector2(525, 800)
+z_index = 6
+position = Vector2(970, 536)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("12_d2bti")
 
 [node name="FlorGrande3" parent="." unique_id=913927291 instance=ExtResource("9_ir8iy")]
-z_index = 4
-position = Vector2(407, 982)
+z_index = 5
+position = Vector2(992, 533)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("13_ta5nu")
 
 [node name="Button" type="Button" parent="." unique_id=1753749550]
 z_index = 2
-offset_left = 281.0
-offset_top = 762.0
-offset_right = 621.18
-offset_bottom = 1078.985
+offset_left = 1441.0
+offset_top = 698.0
+offset_right = 1581.0
+offset_bottom = 843.0
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
@@ -92,9 +105,26 @@ position = Vector2(1781, 949.99994)
 rotation = 2.7314403
 script = null
 
+[node name="Yute" type="Sprite2D" parent="." unique_id=1312911011]
+z_index = 2
+position = Vector2(988, 636)
+texture = ExtResource("16_ta5nu")
+script = ExtResource("17_flf07")
+
+[node name="Label" type="Label" parent="Yute" unique_id=926800497]
+offset_left = -60.0
+offset_top = -19.0
+offset_right = 53.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.7882353, 1, 0.22745098, 1)
+text = "PLACEHOLDER
+YUTE"
+
+[connection signal="pressed" from="Button" to="Vivi" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Pegamento" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Rama_A" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="FlorGrande" method="_on_button_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="FlorGrande2" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="FlorGrande3" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Yute" method="_on_button_pressed"]
