@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://r5ribce5jkr" path="res://flor_grande.tscn" id="9_ir8iy"]
 [ext_resource type="PackedScene" uid="uid://cpuvgpf3de7sm" path="res://Florcitas.tscn" id="11_hqns4"]
 [ext_resource type="Script" uid="uid://dlik811v32wsk" path="res://flor_grande.gd" id="11_nr8wp"]
+[ext_resource type="Script" uid="uid://bme7r27pmi0yf" path="res://flor_grande2.gd" id="12_d2bti"]
+[ext_resource type="Script" uid="uid://dxuync2jjh1aw" path="res://flor_grande3.gd" id="13_ta5nu"]
 
 [node name="Node2D" type="Node2D" unique_id=217590319]
 
@@ -35,8 +37,8 @@ texture = ExtResource("5_kdubu")
 metadata/_edit_lock_ = true
 
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("5_d21ai")]
-z_index = 4
-position = Vector2(790.99994, 558.99994)
+z_index = 10
+position = Vector2(363, 678)
 rotation = 2.284636
 scale = Vector2(0.71818185, 0.71818197)
 script = ExtResource("5_ir8iy")
@@ -59,16 +61,29 @@ scale = Vector2(0.5994614, 0.5994614)
 script = null
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("9_ir8iy")]
-position = Vector2(974.00006, 546)
+z_index = 6
+position = Vector2(387, 868)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("11_nr8wp")
 
+[node name="FlorGrande2" parent="." unique_id=1898763571 instance=ExtResource("9_ir8iy")]
+z_index = 5
+position = Vector2(525, 800)
+scale = Vector2(0.7733812, 0.77338123)
+script = ExtResource("12_d2bti")
+
+[node name="FlorGrande3" parent="." unique_id=913927291 instance=ExtResource("9_ir8iy")]
+z_index = 4
+position = Vector2(407, 982)
+scale = Vector2(0.7733812, 0.77338123)
+script = ExtResource("13_ta5nu")
+
 [node name="Button" type="Button" parent="." unique_id=1753749550]
 z_index = 2
-offset_left = 927.0
-offset_top = 507.0
-offset_right = 1047.0
-offset_bottom = 1070.0
+offset_left = 281.0
+offset_top = 762.0
+offset_right = 621.18
+offset_bottom = 1078.985
 action_mode = 0
 script = ExtResource("9_4d7sh")
 
@@ -81,3 +96,5 @@ script = null
 [connection signal="pressed" from="Button" to="Rama_A" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="FlorGrande" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="FlorGrande2" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="FlorGrande3" method="_on_button_pressed"]
