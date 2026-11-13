@@ -133,6 +133,7 @@ texture = ExtResource("19_2lvmi")
 script = ExtResource("19_rjmj0")
 
 [node name="Cartel" type="AnimatedSprite2D" parent="." unique_id=636478750]
+visible = false
 z_index = 7
 position = Vector2(960, 592)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
