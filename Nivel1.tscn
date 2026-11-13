@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://rc2o003ey8vt" path="res://assets/Mesa.png" id="3_wf1lk"]
 [ext_resource type="Texture2D" uid="uid://dlulljdko6f8o" path="res://assets/Vivi.png" id="4_bpvb4"]
 [ext_resource type="Script" uid="uid://bgumpbhqk2gi3" path="res://vivi.gd" id="5_gxvts"]
-[ext_resource type="Texture2D" uid="uid://cvf5eox6hswm5" path="res://assets/Burbuja.png" id="6_2lvmi"]
+[ext_resource type="Texture2D" uid="uid://04520vsiuq81" path="res://assets/Burbuja grande.png" id="6_2lvmi"]
 [ext_resource type="PackedScene" uid="uid://qwmhab85fnxe" path="res://Pegamento.tscn" id="6_wlfyn"]
 [ext_resource type="Script" uid="uid://ddh7p0kg2sp5k" path="res://pegamento.gd" id="7_b88dk"]
 [ext_resource type="PackedScene" uid="uid://5fqnsyhwln3h" path="res://rama_a.tscn" id="8_77crl"]
@@ -20,6 +20,22 @@
 [ext_resource type="PackedScene" uid="uid://cpuvgpf3de7sm" path="res://Florcitas.tscn" id="17_mia6s"]
 [ext_resource type="Texture2D" uid="uid://bkxjhluieqg6v" path="res://assets/yute.png" id="19_2lvmi"]
 [ext_resource type="Script" uid="uid://bmgoqbaqe7udb" path="res://yute.gd" id="19_rjmj0"]
+[ext_resource type="Texture2D" uid="uid://dx437wakempq6" path="res://assets/Felicidades 1.png" id="21_bpvb4"]
+[ext_resource type="Texture2D" uid="uid://dlygomxipyplr" path="res://assets/Felicidades 2.png" id="22_gxvts"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("21_bpvb4")
+}, {
+"duration": 12.0,
+"texture": ExtResource("22_gxvts")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 24.0
+}]
 
 [node name="Main" type="Node2D" unique_id=217590319]
 script = ExtResource("1_w3kxv")
@@ -44,18 +60,19 @@ script = ExtResource("5_gxvts")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Vivi" unique_id=2088892617]
-offset_left = -1208.8365
-offset_top = -426.274
-offset_right = -434.2268
-offset_bottom = -133.6083
+offset_left = -1802.1208
+offset_top = -435.81744
+offset_right = -497.84973
+offset_bottom = -65.21362
 theme_override_colors/font_color = Color(0.3439702, 0.49999923, 0.5000602, 1)
 theme_override_font_sizes/font_size = 72
 text = "texto de prueba lorem ipsum o algo"
-horizontal_alignment = 1
+horizontal_alignment = 3
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Bubble" type="Sprite2D" parent="." unique_id=365001519]
-position = Vector2(1143, 204)
+position = Vector2(914, 200)
 texture = ExtResource("6_2lvmi")
 metadata/_edit_lock_ = true
 
@@ -115,14 +132,26 @@ position = Vector2(988, 636)
 texture = ExtResource("19_2lvmi")
 script = ExtResource("19_rjmj0")
 
-[node name="Victoria" type="Label" parent="." unique_id=820970581]
-visible = false
-offset_left = 111.0
-offset_top = 93.0
-offset_right = 738.0
-offset_bottom = 263.0
-theme_override_font_sizes/font_size = 124
-text = "¡GANASTE!"
+[node name="Cartel" type="AnimatedSprite2D" parent="." unique_id=636478750]
+z_index = 7
+position = Vector2(960, 592)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.48093992
+metadata/_edit_lock_ = true
+
+[node name="Victoria" type="Label" parent="Cartel" unique_id=820970581]
+offset_left = -503.0
+offset_top = -65.0
+offset_right = 567.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.8109158, 0.89338857, 0.8931097, 1)
+theme_override_font_sizes/font_size = 36
+text = "¡Ya hiciste tu primera flor de tela! Siguiendo los mismos pasos podés hacerla en la vida real, ¡Animate!
+
+Para aprender más manualidades, seguí a @viviheck en Instagram o Vivi Heck en Facebook."
+horizontal_alignment = 3
+autowrap_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Vivi" method="_on_button_pressed"]
