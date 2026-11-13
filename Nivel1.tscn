@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://rc2o003ey8vt" path="res://assets/Mesa.png" id="3_wf1lk"]
 [ext_resource type="Texture2D" uid="uid://dlulljdko6f8o" path="res://assets/Vivi.png" id="4_bpvb4"]
 [ext_resource type="Script" uid="uid://bgumpbhqk2gi3" path="res://vivi.gd" id="5_gxvts"]
+[ext_resource type="Texture2D" uid="uid://cvf5eox6hswm5" path="res://assets/Burbuja.png" id="6_2lvmi"]
 [ext_resource type="PackedScene" uid="uid://qwmhab85fnxe" path="res://Pegamento.tscn" id="6_wlfyn"]
 [ext_resource type="Script" uid="uid://ddh7p0kg2sp5k" path="res://pegamento.gd" id="7_b88dk"]
 [ext_resource type="PackedScene" uid="uid://5fqnsyhwln3h" path="res://rama_a.tscn" id="8_77crl"]
@@ -13,11 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://b8o101ovm1rgp" path="res://rama_c.tscn" id="11_ldw2b"]
 [ext_resource type="PackedScene" uid="uid://r5ribce5jkr" path="res://flor_grande.tscn" id="12_j0juc"]
 [ext_resource type="Script" uid="uid://dlik811v32wsk" path="res://flor_grande.gd" id="13_1ixex"]
-[ext_resource type="Script" uid="uid://bme7r27pmi0yf" path="res://flor_grande2.gd" id="14_f8y8v"]
-[ext_resource type="Script" uid="uid://dxuync2jjh1aw" path="res://flor_grande3.gd" id="15_beigf"]
+[ext_resource type="PackedScene" uid="uid://dpbxwh03hrqgx" path="res://flor_grande_2.tscn" id="15_2lvmi"]
 [ext_resource type="Script" uid="uid://byple3mbumbfp" path="res://button.gd" id="16_w5lbn"]
+[ext_resource type="PackedScene" uid="uid://cjj7mrg6ifp8d" path="res://flor_grande_3.tscn" id="16_wf1lk"]
 [ext_resource type="PackedScene" uid="uid://cpuvgpf3de7sm" path="res://Florcitas.tscn" id="17_mia6s"]
-[ext_resource type="Texture2D" uid="uid://c6wmnefn06xp7" path="res://icon.svg" id="18_kw03b"]
+[ext_resource type="Texture2D" uid="uid://bkxjhluieqg6v" path="res://assets/yute.png" id="19_2lvmi"]
 [ext_resource type="Script" uid="uid://bmgoqbaqe7udb" path="res://yute.gd" id="19_rjmj0"]
 
 [node name="Main" type="Node2D" unique_id=217590319]
@@ -43,13 +44,20 @@ script = ExtResource("5_gxvts")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Vivi" unique_id=2088892617]
-offset_left = -815.9647
-offset_top = -453.31375
-offset_right = -260.61853
-offset_bottom = -282.39032
+offset_left = -1208.8365
+offset_top = -426.274
+offset_right = -434.2268
+offset_bottom = -133.6083
+theme_override_colors/font_color = Color(0.3439702, 0.49999923, 0.5000602, 1)
 theme_override_font_sizes/font_size = 72
 text = "texto de prueba lorem ipsum o algo"
+horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Bubble" type="Sprite2D" parent="." unique_id=365001519]
+position = Vector2(1143, 204)
+texture = ExtResource("6_2lvmi")
+metadata/_edit_lock_ = true
 
 [node name="Pegamento" parent="." unique_id=211818982 instance=ExtResource("6_wlfyn")]
 z_index = 10
@@ -81,17 +89,11 @@ position = Vector2(980, 546)
 scale = Vector2(0.7733812, 0.77338123)
 script = ExtResource("13_1ixex")
 
-[node name="FlorGrande2" parent="." unique_id=1898763571 instance=ExtResource("12_j0juc")]
-z_index = 6
+[node name="FlorGrande2" parent="." unique_id=1774568584 instance=ExtResource("15_2lvmi")]
 position = Vector2(970, 536)
-scale = Vector2(0.7733812, 0.77338123)
-script = ExtResource("14_f8y8v")
 
-[node name="FlorGrande3" parent="." unique_id=913927291 instance=ExtResource("12_j0juc")]
-z_index = 5
+[node name="FlorGrande3" parent="." unique_id=86535546 instance=ExtResource("16_wf1lk")]
 position = Vector2(992, 533)
-scale = Vector2(0.7733812, 0.77338123)
-script = ExtResource("15_beigf")
 
 [node name="Button" type="Button" parent="." unique_id=1753749550]
 z_index = 2
@@ -110,17 +112,8 @@ script = null
 [node name="Yute" type="Sprite2D" parent="." unique_id=1312911011]
 z_index = 2
 position = Vector2(988, 636)
-texture = ExtResource("18_kw03b")
+texture = ExtResource("19_2lvmi")
 script = ExtResource("19_rjmj0")
-
-[node name="Label" type="Label" parent="Yute" unique_id=926800497]
-offset_left = -60.0
-offset_top = -19.0
-offset_right = 53.0
-offset_bottom = 30.0
-theme_override_colors/font_color = Color(0.7882353, 1, 0.22745098, 1)
-text = "PLACEHOLDER
-YUTE"
 
 [node name="Victoria" type="Label" parent="." unique_id=820970581]
 visible = false
