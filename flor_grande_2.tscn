@@ -2,9 +2,31 @@
 
 [ext_resource type="Texture2D" uid="uid://jpaffm5jordi" path="res://assets/Flor 2.png" id="1_8lxa0"]
 [ext_resource type="Script" uid="uid://bme7r27pmi0yf" path="res://flor_grande2.gd" id="2_aj3ql"]
+[ext_resource type="Texture2D" uid="uid://cf67qvjxk8lht" path="res://assets/Flor 2 (silicona).png" id="2_axn56"]
 
-[node name="FlorGrande2" type="Sprite2D" unique_id=1774568584]
+[sub_resource type="SpriteFrames" id="SpriteFrames_dd11d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8lxa0")
+}],
+"loop": 1,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_axn56")
+}],
+"loop": 1,
+"name": &"Silicona",
+"speed": 5.0
+}]
+
+[node name="FlorGrande2" type="AnimatedSprite2D" unique_id=1415634571]
 z_index = 6
 scale = Vector2(0.7733812, 0.77338123)
-texture = ExtResource("1_8lxa0")
+sprite_frames = SubResource("SpriteFrames_dd11d")
+animation = &"Silicona"
+autoplay = "Default"
 script = ExtResource("2_aj3ql")

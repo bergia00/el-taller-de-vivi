@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 func ActualizarValores():
 	ValoresObjetivo = ValoresEtapas[Etapa]
-
+	
 func SetearPosicion():
 	global_position.x = ValoresObjetivo.get(0)
 	global_position.y = ValoresObjetivo.get(1)

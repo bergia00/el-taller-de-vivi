@@ -1,5 +1,5 @@
-extends Sprite2D
-var ValoresEtapas = [[387, 868, 0], [942, 804, 0], [942, 804, 0], [942, 698, 0], [387, 868, 0], [387, 868, 0], [387, 850, 0], [980, 546, 0], [980, 546, 0], [980, 546, 0], [980, 546, 0], [980, 546, 0],[980, 546, 0],[980, 546, 0],[980, 546, 0],[980, 546, 0],[980, 546, 0],[980, 546, 0],[980, 546, 0]]
+extends AnimatedSprite2D
+var ValoresEtapas = [[387, 868, 0], [942, 804, 0], [942, 804, 0], [942, 698, 0], [387, 868, 0], [387, 868, 0], [387, 850, 0], [995, 706, 0], [995, 706, 0], [995, 706, 0], [995, 706, 0], [995, 706, 0],[995, 706, 0],[995, 706, 0],[995, 706, 0],[995, 706, 0],[995, 706, 0],[995, 706, 0],[995, 706, 0]]
 var Etapa = 0
 const VELOCIDAD = 2
 var ValoresObjetivo
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	
 func ActualizarValores():
 	ValoresObjetivo = ValoresEtapas[Etapa]
-
+	CambiarSprite()
 func SetearPosicion():
 	global_position.x = ValoresObjetivo.get(0)
 	global_position.y = ValoresObjetivo.get(1)
@@ -24,3 +24,18 @@ func SetearPosicion():
 func _on_button_pressed() -> void:
 	Etapa += 1
 	ActualizarValores()
+
+func CambiarSprite():
+	match Etapa:
+		4:
+			play("Silicona")
+		7:
+			await get_tree().create_timer(2).timeout
+			play("Puesta 1")
+		11:
+			await get_tree().create_timer(2).timeout
+			play("Puesta 2")
+		15:
+			await get_tree().create_timer(2).timeout
+			play("Puesta 3")
+		

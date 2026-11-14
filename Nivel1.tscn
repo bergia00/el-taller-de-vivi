@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://cg3w8vioufl6a" path="res://rama_b.tscn" id="10_h0lng"]
 [ext_resource type="PackedScene" uid="uid://b8o101ovm1rgp" path="res://rama_c.tscn" id="11_ldw2b"]
 [ext_resource type="PackedScene" uid="uid://r5ribce5jkr" path="res://flor_grande.tscn" id="12_j0juc"]
-[ext_resource type="Script" uid="uid://dlik811v32wsk" path="res://flor_grande.gd" id="13_1ixex"]
 [ext_resource type="PackedScene" uid="uid://dpbxwh03hrqgx" path="res://flor_grande_2.tscn" id="15_2lvmi"]
 [ext_resource type="Script" uid="uid://byple3mbumbfp" path="res://button.gd" id="16_w5lbn"]
 [ext_resource type="PackedScene" uid="uid://cjj7mrg6ifp8d" path="res://flor_grande_3.tscn" id="16_wf1lk"]
@@ -102,9 +101,9 @@ script = null
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("12_j0juc")]
 z_index = 7
-position = Vector2(980, 546)
+position = Vector2(995, 706)
 scale = Vector2(0.7733812, 0.77338123)
-script = ExtResource("13_1ixex")
+animation = &"Terminada"
 
 [node name="FlorGrande2" parent="." unique_id=1774568584 instance=ExtResource("15_2lvmi")]
 position = Vector2(970, 536)
