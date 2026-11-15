@@ -20,8 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bkxjhluieqg6v" path="res://assets/yute.png" id="19_2lvmi"]
 [ext_resource type="Script" uid="uid://bmgoqbaqe7udb" path="res://yute.gd" id="19_rjmj0"]
 [ext_resource type="Texture2D" uid="uid://dx437wakempq6" path="res://assets/Felicidades 1.png" id="21_bpvb4"]
+[ext_resource type="Texture2D" uid="uid://c52vdsvjxjvhp" path="res://Botón volver al menú.png" id="22_b88dk"]
 [ext_resource type="Script" uid="uid://gk7xt8njk0bo" path="res://rejugar.gd" id="22_bpvb4"]
 [ext_resource type="Texture2D" uid="uid://dlygomxipyplr" path="res://assets/Felicidades 2.png" id="22_gxvts"]
+[ext_resource type="Texture2D" uid="uid://e04lsetum0bd" path="res://Botón volver al menú hover.png" id="23_77crl"]
 [ext_resource type="Texture2D" uid="uid://c84rlhs1fg4ov" path="res://Flor real pintura.png" id="23_gxvts"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
@@ -155,12 +157,16 @@ Para aprender más manualidades, seguí a @viviheck en Instagram o Vivi Heck en 
 horizontal_alignment = 3
 autowrap_mode = 3
 
-[node name="Rejugar" type="Button" parent="Cartel" unique_id=1464337071]
-offset_left = 137.0
-offset_top = 225.0
-offset_right = 504.5484
-offset_bottom = 279.0
-text = "Volver a jugar vamos boca"
+[node name="Rejugar" type="TextureButton" parent="Cartel" unique_id=603868248]
+offset_left = -210.0
+offset_top = 208.0
+offset_right = 269.4619
+offset_bottom = 505.0
+texture_normal = ExtResource("22_b88dk")
+texture_pressed = ExtResource("22_b88dk")
+texture_hover = ExtResource("23_77crl")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("22_bpvb4")
 
 [node name="Flor Real" type="Sprite2D" parent="Cartel" unique_id=65992839]
