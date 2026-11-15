@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bkxjhluieqg6v" path="res://assets/yute.png" id="19_2lvmi"]
 [ext_resource type="Script" uid="uid://bmgoqbaqe7udb" path="res://yute.gd" id="19_rjmj0"]
 [ext_resource type="Texture2D" uid="uid://dx437wakempq6" path="res://assets/Felicidades 1.png" id="21_bpvb4"]
+[ext_resource type="Script" uid="uid://gk7xt8njk0bo" path="res://rejugar.gd" id="22_bpvb4"]
 [ext_resource type="Texture2D" uid="uid://dlygomxipyplr" path="res://assets/Felicidades 2.png" id="22_gxvts"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
@@ -153,12 +154,13 @@ Para aprender más manualidades, seguí a @viviheck en Instagram o Vivi Heck en 
 horizontal_alignment = 3
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="Cartel" unique_id=1464337071]
+[node name="Rejugar" type="Button" parent="Cartel" unique_id=1464337071]
 offset_left = 137.0
 offset_top = 225.0
 offset_right = 504.5484
 offset_bottom = 279.0
 text = "Volver a jugar vamos boca"
+script = ExtResource("22_bpvb4")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Vivi" method="_on_button_pressed"]
@@ -169,3 +171,4 @@ text = "Volver a jugar vamos boca"
 [connection signal="pressed" from="Button" to="FlorGrande3" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="Yute" method="_on_button_pressed"]
+[connection signal="pressed" from="Cartel/Rejugar" to="Cartel/Rejugar" method="_on_pressed"]
