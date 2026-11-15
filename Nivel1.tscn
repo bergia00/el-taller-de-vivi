@@ -153,6 +153,13 @@ Para aprender más manualidades, seguí a @viviheck en Instagram o Vivi Heck en 
 horizontal_alignment = 3
 autowrap_mode = 3
 
+[node name="Button" type="Button" parent="Cartel" unique_id=1464337071]
+offset_left = 137.0
+offset_top = 225.0
+offset_right = 504.5484
+offset_bottom = 279.0
+text = "Volver a jugar vamos boca"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Vivi" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Pegamento" method="_on_button_pressed"]
