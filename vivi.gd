@@ -13,7 +13,7 @@ func Actualizar():
 		$Label.visible = true
 		$Label.text = Dialogos.get(Etapa)
 		$"../Bubble".visible = true
-	
+			
 func _on_button_pressed() -> void:
 	Etapa += 1
 	Actualizar()
