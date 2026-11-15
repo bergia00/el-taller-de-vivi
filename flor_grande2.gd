@@ -30,5 +30,5 @@ func CambiarSprite():
 		10:
 			play("Silicona")
 		11:
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3).timeout
 			queue_free()

@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dx437wakempq6" path="res://assets/Felicidades 1.png" id="21_bpvb4"]
 [ext_resource type="Script" uid="uid://gk7xt8njk0bo" path="res://rejugar.gd" id="22_bpvb4"]
 [ext_resource type="Texture2D" uid="uid://dlygomxipyplr" path="res://assets/Felicidades 2.png" id="22_gxvts"]
+[ext_resource type="Texture2D" uid="uid://c84rlhs1fg4ov" path="res://Flor real pintura.png" id="23_gxvts"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -63,9 +64,9 @@ metadata/_edit_lock_ = true
 offset_left = -1802.1208
 offset_top = -435.81744
 offset_right = -497.84973
-offset_bottom = -65.21362
+offset_bottom = -116.11197
 theme_override_colors/font_color = Color(0.3439702, 0.49999923, 0.5000602, 1)
-theme_override_font_sizes/font_size = 72
+theme_override_font_sizes/font_size = 67
 text = "texto de prueba lorem ipsum o algo"
 horizontal_alignment = 3
 vertical_alignment = 1
@@ -161,6 +162,12 @@ offset_right = 504.5484
 offset_bottom = 279.0
 text = "Volver a jugar vamos boca"
 script = ExtResource("22_bpvb4")
+
+[node name="Flor Real" type="Sprite2D" parent="Cartel" unique_id=65992839]
+position = Vector2(525.00006, -143)
+rotation = -0.17453292
+scale = Vector2(0.30261648, 0.30261648)
+texture = ExtResource("23_gxvts")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Vivi" method="_on_button_pressed"]

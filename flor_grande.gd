@@ -33,14 +33,16 @@ func CambiarSprite():
 		4:
 			play("Silicona")
 		7:
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3.5).timeout
 			play("Puesta 1")
 		11:
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3).timeout
 			play("Puesta 2")
 		15:
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3).timeout
 			play("Puesta 3")
+		18:
+			play("Pegada Rama")
 		20:
 			await get_tree().create_timer(2).timeout
 			play("Terminada")
