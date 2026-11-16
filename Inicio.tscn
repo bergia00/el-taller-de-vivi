@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://odbitj8bixh" path="res://assets/Título 1.png" id="5_wb6hq"]
 [ext_resource type="Texture2D" uid="uid://bupadixbhktn2" path="res://assets/Título 2.png" id="6_4kv3a"]
 [ext_resource type="Texture2D" uid="uid://bllsc1e8fgwi3" path="res://assets/coso4.png" id="6_p3aed"]
+[ext_resource type="Texture2D" uid="uid://828nsxhfru6y" path="res://Instrucciones botón.png" id="11_m44b3"]
+[ext_resource type="Texture2D" uid="uid://3o7or1rb5pgf" path="res://Instrucciones botón hover.png" id="12_p3aed"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
@@ -68,9 +70,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 665.0
+offset_left = 412.0
 offset_top = 645.0
-offset_right = 1210.6501
+offset_right = 957.65015
 offset_bottom = 983.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -85,4 +87,16 @@ scale = Vector2(0.78358203, 0.78358203)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"
 
+[node name="Instrucciones" type="TextureButton" parent="." unique_id=560475814]
+offset_left = 938.0
+offset_top = 608.0
+offset_right = 1624.0986
+offset_bottom = 1033.0
+texture_normal = ExtResource("11_m44b3")
+texture_pressed = ExtResource("11_m44b3")
+texture_hover = ExtResource("12_p3aed")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Instrucciones" to="." method="_on_instrucciones_pressed"]

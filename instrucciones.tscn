@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dr6u8gpdxblic"]
+
+[ext_resource type="Texture2D" uid="uid://bwcpp8stixhlu" path="res://assets/Menú.png" id="1_lotqq"]
+[ext_resource type="Texture2D" uid="uid://bbn6lvndcbh5j" path="res://Instrucciones.png" id="2_87jxx"]
+[ext_resource type="Texture2D" uid="uid://b5ak3qoyb1u6j" path="res://assets/coso1.png" id="2_kykkd"]
+[ext_resource type="Texture2D" uid="uid://hkuulgvhmmiq" path="res://assets/coso2.png" id="3_3w10d"]
+[ext_resource type="Texture2D" uid="uid://bcgq55gn41rkk" path="res://Materiales título.png" id="3_54dmn"]
+[ext_resource type="Texture2D" uid="uid://dtegspeuxggc4" path="res://Procedimiento título.png" id="4_0lcjo"]
+[ext_resource type="Texture2D" uid="uid://bllsc1e8fgwi3" path="res://assets/coso4.png" id="4_0nf43"]
+[ext_resource type="Texture2D" uid="uid://c52vdsvjxjvhp" path="res://Botón volver al menú.png" id="5_k606i"]
+[ext_resource type="Texture2D" uid="uid://d1vt14x4qc6c0" path="res://assets/coso3.png" id="5_va7rw"]
+[ext_resource type="Texture2D" uid="uid://e04lsetum0bd" path="res://Botón volver al menú hover.png" id="6_jnopp"]
+[ext_resource type="Script" uid="uid://gk7xt8njk0bo" path="res://rejugar.gd" id="7_524lh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh3gr"]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": ExtResource("2_kykkd")
+}, {
+"duration": 6.0,
+"texture": ExtResource("3_3w10d")
+}, {
+"duration": 6.0,
+"texture": ExtResource("4_0nf43")
+}, {
+"duration": 6.0,
+"texture": ExtResource("5_va7rw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Instrucciones" type="Node2D" unique_id=2039495700]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1765450890]
+offset_right = 1921.0
+offset_bottom = 1081.0
+texture = ExtResource("1_lotqq")
+metadata/_edit_lock_ = true
+
+[node name="Deco" type="AnimatedSprite2D" parent="." unique_id=495938005]
+position = Vector2(958, 540)
+sprite_frames = SubResource("SpriteFrames_wh3gr")
+autoplay = "default"
+
+[node name="Fondo Instrucciones" type="Sprite2D" parent="." unique_id=298884039]
+position = Vector2(950.2222, 507)
+scale = Vector2(0.8648148, 0.8648148)
+texture = ExtResource("2_87jxx")
+
+[node name="Procedimiento título" type="Sprite2D" parent="Fondo Instrucciones" unique_id=407348844]
+position = Vector2(-530.0309, -94.81801)
+scale = Vector2(0.800288, 0.85038555)
+texture = ExtResource("4_0lcjo")
+
+[node name="Materiales título" type="Sprite2D" parent="Fondo Instrucciones" unique_id=1953545540]
+position = Vector2(-578.74255, -407.02356)
+scale = Vector2(0.6722149, 0.71556836)
+texture = ExtResource("3_54dmn")
+
+[node name="Materiales" type="Label" parent="Fondo Instrucciones" unique_id=931362566]
+offset_left = -791.0
+offset_top = -386.20987
+offset_right = 786.0386
+offset_bottom = -149.20987
+theme_override_colors/font_color = Color(0.8109158, 0.89338857, 0.8931097, 1)
+theme_override_font_sizes/font_size = 32
+text = "* Un retazo de tela de algodón del color que más te guste.
+* Una Rama natural de madera (de árbol/planta) de unos 40 cm de largo aproximadamente.
+* Silicona líquida o pistola de silicona.
+* Hilo de yute fino.
+* Tijera"
+autowrap_mode = 3
+
+[node name="Procedimiento" type="Label" parent="Fondo Instrucciones" unique_id=1630234264]
+offset_left = -791.0
+offset_top = -63.625275
+offset_right = 795.28906
+offset_bottom = 461.37473
+theme_override_colors/font_color = Color(0.8109158, 0.89338857, 0.8931097, 1)
+theme_override_font_sizes/font_size = 32
+text = "- Marcar y cortar 3 círculos de 15 cm de diámetro. Se puede cortar con forma de \"pétalos\" o dejarlo como círculo.
+- Hacer un pequeño orificio en el centro de cada círculo por donde va a pasar el extremo inferior de la varilla. 
+- Colocar silicona a 1 cm rodeando el centro del primer círculo, envolver el extremo de la varilla, ayudándonos con los dedos índice y pulgar de cada mano, en forma de pinza, para darle más cuerpo a la flor.
+- Colocar silicona en forma de redondel en el siguiente círculo de tela y envolver al primero dando vuelo y forma de pétalos o acomodando los pétalos ya cortados. Hacer lo mismo con el siguiente.
+- Una vez terminada, colocar abundante silicona en la parte exterior del cáliz de la flor y parte de la rama y enrollar sobre éste un trozo de hilo de yute para reforzarla y darle una buena terminación. "
+autowrap_mode = 3
+
+[node name="Rejugar" type="TextureButton" parent="." unique_id=909227409]
+offset_left = 1540.0
+offset_top = 843.0
+offset_right = 1921.7103
+offset_bottom = 1083.0
+texture_normal = ExtResource("5_k606i")
+texture_pressed = ExtResource("5_k606i")
+texture_hover = ExtResource("6_jnopp")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_524lh")
+
+[connection signal="pressed" from="Rejugar" to="Rejugar" method="_on_pressed"]
