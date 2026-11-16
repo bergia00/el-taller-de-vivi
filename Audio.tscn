@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://kb54wt501xb8"]
+
+[ext_resource type="Script" uid="uid://caspwumfmffid" path="res://Audio.tscn.gd" id="1_g84o6"]
+
+[node name="Audio" type="Node" unique_id=823770378]
+script = ExtResource("1_g84o6")
+
+[node name="Música" type="AudioStreamPlayer2D" parent="." unique_id=1136509655]
