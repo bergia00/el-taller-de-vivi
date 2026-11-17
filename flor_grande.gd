@@ -1,5 +1,5 @@
 extends AnimatedSprite2D
-var ValoresEtapas = [[387, 1068, 0], [942, 1000, 0], [942, 1000, 0], [942, 868, 0], [387, 1068, 0], [387, 1068, 0], [387, 1050, 0], [995, 706, 0], [995, 706, 0]]
+var ValoresEtapas = [[387, 1068, 0], [942, 1000, 0], [942, 1000, 0], [942, 868, 0], [387, 1068, 0], [387, 1068, 0], [387, 1050, 0], [1036, 1263, 0], [995, 706, 0], [995, 706, 0]]
 var Etapa = 0
 const VELOCIDAD = 2
 var ValoresObjetivo
@@ -14,10 +14,10 @@ func _process(delta: float) -> void:
 	rotation_degrees += (ValoresObjetivo.get(2) - rotation_degrees) * VELOCIDAD * delta
 	
 func ActualizarValores():
-	if Etapa < 8:
+	if Etapa < 9:
 		ValoresObjetivo = ValoresEtapas[Etapa]
 	else:
-		ValoresObjetivo = ValoresEtapas[8]
+		ValoresObjetivo = ValoresEtapas[9]
 	CambiarSprite()
 func SetearPosicion():
 	global_position.x = ValoresObjetivo.get(0)
@@ -32,17 +32,18 @@ func CambiarSprite():
 	match Etapa:
 		4:
 			play("Silicona")
-		7:
-			await get_tree().create_timer(3.5).timeout
+		8:
+			await get_tree().create_timer(1.6).timeout
 			play("Puesta 1")
-		11:
+		12:
 			await get_tree().create_timer(3).timeout
 			play("Puesta 2")
-		15:
-			await get_tree().create_timer(3).timeout
-			play("Puesta 3")
 		18:
+			await get_tree().create_timer(1).timeout
+			play("Puesta 3")
+		21:
+			
 			play("Pegada Rama")
-		20:
+		23:
 			await get_tree().create_timer(2).timeout
 			play("Terminada")

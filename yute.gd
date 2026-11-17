@@ -13,11 +13,11 @@ func _process(delta: float) -> void:
 	z_index = ValoresObjetivo.get(2)
 	
 func ActualizarValores():
-	if Etapa > 19:
+	if Etapa > 22:
 		ValoresObjetivo = [988, 636, 4]
 	else:
 		ValoresObjetivo = [1511, 771, 2]
-	if Etapa == 20:
+	if Etapa == 23:
 		await get_tree().create_timer(2).timeout
 		visible = false
 func SetearPosicion():

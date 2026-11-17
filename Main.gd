@@ -8,7 +8,7 @@ func _on_button_pressed() -> void:
 	Etapa += 1
 	Victoria()
 func Victoria():
-	if Etapa == 20:
+	if Etapa == 23:
 		$Button.disabled = true
 		await get_tree().create_timer(5).timeout
 		$Cartel.visible = true

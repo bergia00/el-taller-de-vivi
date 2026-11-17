@@ -1,5 +1,5 @@
 extends AnimatedSprite2D
-var ValoresEtapas = [[407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 902, 60], [407, 902, 60], [960, 533, 60], [960, 533, 60]]
+var ValoresEtapas = [[407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60], [407, 982, 60],  [407, 902, 60], [407, 902, 60], [1016, 1053, 60], [960, 533, 60], [960, 533, 60]]
 var Etapa = 0
 const VELOCIDAD = 2
 var ValoresObjetivo
@@ -14,10 +14,10 @@ func _process(delta: float) -> void:
 	rotation_degrees += (ValoresObjetivo.get(2) - rotation_degrees) * VELOCIDAD * delta
 	
 func ActualizarValores():
-	if Etapa < 15:
+	if Etapa < 18:
 		ValoresObjetivo = ValoresEtapas[Etapa]
 	else:
-		ValoresObjetivo = ValoresEtapas[15]
+		ValoresObjetivo = ValoresEtapas[18]
 	CambiarSprite()
 func SetearPosicion():
 	global_position.x = ValoresObjetivo.get(0)
@@ -30,8 +30,8 @@ func _on_button_pressed() -> void:
 
 func CambiarSprite():
 	match Etapa:
-		14:
+		16:
 			play("Silicona")
-		15:
-			await get_tree().create_timer(3).timeout
+		18:
+			await get_tree().create_timer(1).timeout
 			queue_free()

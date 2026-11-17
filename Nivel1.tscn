@@ -105,9 +105,9 @@ script = null
 
 [node name="FlorGrande" parent="." unique_id=1377256433 instance=ExtResource("12_j0juc")]
 z_index = 7
-position = Vector2(995, 706)
+position = Vector2(1036, 1263)
 scale = Vector2(0.7733812, 0.77338123)
-animation = &"Terminada"
+animation = &"Default"
 
 [node name="FlorGrande2" parent="." unique_id=1774568584 instance=ExtResource("15_2lvmi")]
 position = Vector2(970, 536)
